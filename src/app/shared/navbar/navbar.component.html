@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">effects</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" [routerLink]="['/home']" routerLinkActive="active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/usuario',10]" routerLinkActive="active">Usuario</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <input (keyup.enter)="irUsuario(txtId.value)" #txtId class="form-control me-2" type="search" placeholder="ID usuario" aria-label="Search">
+                <button class="btn btn-outline-success" type="button" (click)="irUsuario(txtId.value)">Buscar</button>
+            </div>
+        </div>
+    </div>
+</nav>
